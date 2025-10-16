@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "slug": "aion2-abyss-guide",
+      "title": "아이온2 라이브 정리",
+      "excerpt": "어비스 포인트 획득/활용, 투기장, 보급 의뢰, 강화·스킬·콘텐츠까지 한 번에 정리",
+      "date": "2025-10-16",
+      "category": "아이온2",
+      "tags": ["아이온2","RPG","MMO","어비스","투기장","보급의뢰","강화","아르카나"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "수레나 선생님"
+    },
+    {
+      "slug": "aion2-class-pve-pvp",
+      "title": "아이온2 직업 및 PvE/PvP 정보 정리",
+      "excerpt": "직업 무기·장비 시스템, 인던 역할/난이도, PvE/PvP 메타·밸런스 요약",
+      "date": "2025-10-16",
+      "category": "아이온2",
+      "tags": ["아이온2","RPG","MMO","직업","PvE","PvP","인던","투기장"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "수레나 선생님"
+    }
+  ]
+}
