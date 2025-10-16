@@ -15,7 +15,8 @@ export default function PostCard({ p }: { p: PostMeta }) {
   const date = new Date(p.date);
   const d = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
   const repoName = process.env.NEXT_PUBLIC_BASE_PATH || '';
-  const isUserSite = repoName.endsWith('.github.io');
+  const repoOwner = process.env.NEXT_PUBLIC_REPO_OWNER || '';
+  const isUserSite = repoOwner && repoName === `${repoOwner}.github.io`;
   const prefix = repoName && !isUserSite ? `/${repoName}` : '';
   return (
     <article className="card">

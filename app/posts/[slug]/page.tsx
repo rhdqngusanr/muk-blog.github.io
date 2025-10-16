@@ -16,7 +16,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   const { slug } = await props.params;
   const p = meta.posts.find(x => x.slug === slug);
   return {
-    title: p ? `${p.title} - Muk 팀블로그` : '포스트 - Muk 팀블로그',
+    title: p ? `${p.title} - 재미난사람들` : '포스트 - 재미난사람들',
     description: p?.excerpt,
   };
 }
@@ -31,7 +31,8 @@ export default async function PostPage(props: { params: Promise<{ slug: string }
   const date = p ? new Date(p.date) : new Date();
   const d = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
   const repoName = process.env.NEXT_PUBLIC_BASE_PATH || '';
-  const isUserSite = repoName.endsWith('.github.io');
+  const repoOwner = process.env.NEXT_PUBLIC_REPO_OWNER || '';
+  const isUserSite = repoOwner && repoName === `${repoOwner}.github.io`;
   const prefix = repoName && !isUserSite ? `/${repoName}` : '';
 
   return (
