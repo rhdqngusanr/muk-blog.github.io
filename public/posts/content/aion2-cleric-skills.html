@@ -1,0 +1,101 @@
+<div class="job-page">
+  <div class="job-head">
+    <div class="job-title">치유성 직업 요약</div>
+    <div class="job-badges">
+      <span class="job-badge">역할: 힐러/서포트</span>
+      <span class="job-badge">난이도: 중</span>
+      <span class="job-badge">플레이: 광역 힐·보호막·해제·소환</span>
+      <span class="job-badge">주무기: 지팡이</span>
+    </div>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="summary-title">핵심 장점</div>
+      <ul>
+        <li>강력한 보호막(장막)과 광역 힐로 파티 생존 극대화</li>
+        <li>상태 이상 해제·브랜딩(Rescue)로 교전 흐름 리셋</li>
+        <li>소환 오브젝트(성스러운 숨결)로 장기전 유지력 확보</li>
+      </ul>
+    </div>
+    <div class="summary-card">
+      <div class="summary-title">주의점</div>
+      <ul>
+        <li>정신력·충전 시간 관리가 핵심, 무리한 오버힐은 비효율</li>
+        <li>힐 범위·위치 선정(소환 배치 포함) 숙련 필요</li>
+        <li>브랜딩 타이밍 오판 시 쿨다운 손실</li>
+      </ul>
+    </div>
+    <div class="summary-card">
+      <div class="summary-title">운영 키워드</div>
+      <ul>
+        <li>장막 → 힐링 라이트(충전) → 치유의 빛 후속</li>
+        <li>성스러운 숨결 배치 후 오라 갱신 루프</li>
+        <li>Rescue로 광역 해제·회복 타이밍 리셋</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>치유성 스킬 한눈에 보기</h2>
+  <p class="muted">제공된 설명 기준으로 요약했습니다. 강화·조건(충전/오라/아군 적용 등)에 따라 효과가 달라질 수 있습니다.</p>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>스킬명</th>
+          <th>핵심 효과</th>
+          <th>강화 요약</th>
+          <th>자원/쿨</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>불멸의 장막</td>
+          <td>10초 동안 최대 3580 피해 흡수 보호막(이동식), 자신 대상</td>
+          <td>정신력 -50%, 지속 5초로 변경 대신 최대 6200 피해 허용, 아군 대상 사용 가능, 후속: 죽은 자를 되살리세요, 효과 중 2초마다 400 HP 재생</td>
+          <td>정신력 200 / 즉시 / 1분</td>
+        </tr>
+        <tr>
+          <td>힐링 라이트</td>
+          <td>자신 중심 10~20m 범위 아군 1810~2530 HP 회복</td>
+          <td>정신력 -20%, 이동식 시전, 최대 충전 시 자신·아군 이상 상태 해제, 충전 중 최대 1120 피해 허용 보호막, 후속: 치유의 빛</td>
+          <td>정신력 150 / 1.5·2.5·3.5초(충전) / 10초</td>
+        </tr>
+        <tr>
+          <td>치유의 빛(후속)</td>
+          <td>20m 내 아군 1180 HP 회복(이동식)</td>
+          <td>정신력 -20%, 사거리 10m로 감소 대신 1928 회복, 10초 동안 2초마다 418 HoT, 후속: 치유의 바람, 아군 1명 이상 적용 시 재사용 50% 감소</td>
+          <td>정신력 200 / 즉시 / 10초</td>
+        </tr>
+        <tr>
+          <td>소환: 신성한 숨결</td>
+          <td>30초 동안 20m 내 "성스러운 숨결" 1개 소환, 중심 10m 내 아군 3초마다 625 HP 회복</td>
+          <td>정신력 -20%, 영향 범위 15m, 6초마다 범위 내 아군 이상 상태 1개 해제, 종료/파괴 시 4초 동안 아군 전체 보호막(최대 1028 피해), "신성한 오라" 존재 시 범위 내 아군에게 [치유의 빛] 사용하면 오라 지속 갱신(30초당 1회)</td>
+          <td>정신력 200 / 2초 / 40초</td>
+        </tr>
+        <tr>
+          <td>Rescue(브랜딩)</td>
+          <td>자신으로부터 40m 내 아군의 최대 HP·정신력 50% 회복 및 모든 상태 이상 제거, 탈착식 릴리스</td>
+          <td>—</td>
+          <td>정신력 없음 / 즉시 / 2분</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>추천 콤보 <span class="muted">(AI 추천 콤보 ㅋㅋ)</span></h2>
+  <ul>
+    <li><strong>보호막-힐 루프</strong>: 불멸의 장막 → 힐링 라이트(충전·해제) → 치유의 빛 후속으로 즉시 치유.</li>
+    <li><strong>소환 유지력</strong>: 성스러운 숨결 배치 → 범위 힐 유지 → [치유의 빛]으로 오라 갱신(30초 제약 유의).</li>
+    <li><strong>브랜딩 리셋</strong>: 대규모 CC·피해 이후 Rescue로 광역 해제·회복 → 장막으로 재진입 안정화.</li>
+  </ul>
+
+  <h2>운영 팁</h2>
+  <ul>
+    <li><strong>자원·충전 관리</strong>: 충전 힐/오라 갱신 타이밍을 파티 피해 패턴에 맞춰 조율.</li>
+    <li><strong>범위·포지션</strong>: 힐 범위와 소환 배치를 교전 동선에 맞추어 최적화.</li>
+    <li><strong>이동식 캐스팅</strong>: 이동 중 시전 옵션을 적극 활용해 카이팅 상황에서도 힐 손실 최소화.</li>
+    <li><strong>브랜딩 타이밍</strong>: Rescue는 적 광역 제어·폭딜 구간 직후 사용해 가치 극대화.</li>
+  </ul>
+</div>

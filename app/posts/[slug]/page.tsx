@@ -1,6 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import Header from '../../components/Header';
 
 interface PostMeta { slug: string; title: string; excerpt: string; date: string; category: string; tags: string[]; cover: string; source?: string; }
 
@@ -10,16 +12,7 @@ export async function generateStaticParams() {
   return meta.posts.map(p => ({ slug: p.slug }));
 }
 
-export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const metaPath = path.join(process.cwd(), 'public', 'posts', 'posts.json');
-  const meta = JSON.parse(await fs.readFile(metaPath, 'utf-8')) as { posts: PostMeta[] };
-  const { slug } = await props.params;
-  const p = meta.posts.find(x => x.slug === slug);
-  return {
-    title: p ? `${p.title} - 재미난사람들` : '포스트 - 재미난사람들',
-    description: p?.excerpt,
-  };
-}
+export const metadata: Metadata = { title: '재미난사람들' };
 
 export default async function PostPage(props: { params: Promise<{ slug: string }> }) {
   const metaPath = path.join(process.cwd(), 'public', 'posts', 'posts.json');
@@ -35,20 +28,45 @@ export default async function PostPage(props: { params: Promise<{ slug: string }
   const isUserSite = repoOwner && repoName === `${repoOwner}.github.io`;
   const prefix = repoName && !isUserSite ? `/${repoName}` : '';
 
+  function emojiForSlug(slug: string): string {
+    const s = slug.toLowerCase();
+    if (s.includes('guardian')) return '🛡️';
+    if (s.includes('gladiator')) return '⚔️';
+    if (s.includes('assassin')) return '🗡️';
+    if (s.includes('archer')) return '🏹';
+    if (s.includes('cleric')) return '✨';
+    if (s.includes('chanter')) return '🎵';
+    if (s.includes('sorcerer')) return '🔥';
+    if (s.includes('spiritmaster')) return '👻';
+    return '🎮';
+  }
+
   return (
-    <main className="container">
-      <section className="section">
-        <h1 className="post-title">{p?.title ?? '포스트'}</h1>
-        <div className="post-meta muted">{p ? `${d} • ${p.category}` : ''}</div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        {p && (<img src={`${prefix}${p.cover}`} alt="cover" style={{ width: '100%', borderRadius: 12, marginTop: 12, border: '1px solid var(--border)' }} />)}
-      {p && (
-        <div className="source muted" style={{ marginTop: 8 }}>
-          <span className="source-label">출처</span>: <span className="source-value">{p.source ?? '수레나 선생님'}</span>
+    <>
+      <Header />
+      <main className="container">
+        <div className="post-toolbar">
+          <Link href="/#posts" className="button">목록으로</Link>
+          <Link href="/" className="button">홈으로</Link>
         </div>
-      )}
-        <article className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
-      </section>
-    </main>
+        <section className="section">
+          <h1 className="post-title">{p?.title ?? '포스트'}</h1>
+          <div className="post-meta muted">{p ? `${d} • ${p.category}` : ''}</div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          {p && (
+            <div className="cover-wrap" style={{ marginTop: 12 }}>
+              <img src={`${prefix}${p.cover}`} alt="cover" style={{ width: '100%', borderRadius: 12, border: '1px solid var(--border)' }} />
+              <span className="emoji-badge" aria-hidden="true">{emojiForSlug(slug)}</span>
+            </div>
+          )}
+        {p && (
+          <div className="source muted" style={{ marginTop: 8 }}>
+            <span className="source-label">출처</span>: <span className="source-value">{p.source ?? '수레나 선생님'}</span>
+          </div>
+        )}
+          <article className="post-content" dangerouslySetInnerHTML={{ __html: html }} />
+        </section>
+      </main>
+    </>
   );
 }

@@ -19,6 +19,86 @@
       "tags": ["아이온2","RPG","MMO","직업","PvE","PvP","인던","투기장"],
       "cover": "/assets/covers/aion2-overview.svg",
       "source": "수레나 선생님"
+    },
+    {
+      "slug": "aion2-assassin-skills",
+      "title": "아이온2 살성 스킬 정리",
+      "excerpt": "살성 주요 스킬·강화 효과·추천 콤보를 직관적으로 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","살성","스킬","콤보","PvP","PvE"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
+    },
+    {
+      "slug": "aion2-archer-skills",
+      "title": "아이온2 궁성 스킬 정리",
+      "excerpt": "궁성 주요 스킬·강화 효과·추천 콤보를 직관적으로 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","궁성","스킬","낙인","콤보","PvP","PvE"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
+    },
+    {
+      "slug": "aion2-gladiator-skills",
+      "title": "아이온2 검성 스킬 정리",
+      "excerpt": "검성 주요 스킬·강화 효과·추천 콤보를 직관적으로 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","검성","스킬","콤보","PvP","PvE"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
+    },
+    {
+      "slug": "aion2-cleric-skills",
+      "title": "아이온2 치유성 스킬 정리",
+      "excerpt": "치유성 주요 힐·보호·소환·브랜딩 스킬을 직관적으로 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","치유성","스킬","힐","브랜딩","PvE","PvP"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
+    },
+    {
+      "slug": "aion2-spiritmaster-skills",
+      "title": "아이온2 정령성 스킬 정리",
+      "excerpt": "정령 소환·명령·보호·제어 스킬을 직관적으로 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","정령성","스킬","소환","제어","PvP","PvE"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
+    },
+    {
+      "slug": "aion2-guardian-skills",
+      "title": "아이온2 수호성 스킬 정리",
+      "excerpt": "수호성 주요 끌어오기·방패·도발·브랜딩 스킬을 직관적으로 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","수호성","스킬","보호","도발","브랜딩","PvE","PvP"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
+    },
+    {
+      "slug": "aion2-sorcerer-skills",
+      "title": "아이온2 마도성 스킬 정리",
+      "excerpt": "마도성 주요 불·얼음·강화·후속 스킬을 직관적으로 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","마도성","스킬","마법","약화","강화","PvE","PvP"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
+    },
+    {
+      "slug": "aion2-chanter-skills",
+      "title": "아이온2 호법성 스킬 정리",
+      "excerpt": "호법성 주요 약화·버프·보호 스킬과 후속 연계를 요약",
+      "date": "2025-10-18",
+      "category": "아이온2",
+      "tags": ["아이온2","호법성","스킬","강화","보호","버프","PvE","PvP"],
+      "cover": "/assets/covers/aion2-overview.svg",
+      "source": "게임 내 툴팁 정리"
     }
   ]
 }

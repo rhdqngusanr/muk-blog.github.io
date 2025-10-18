@@ -23,7 +23,7 @@ export default function Page() {
       .catch(() => setAllPosts([]));
   }, []);
 
-  const cats = useMemo(() => ['RPG', 'MMO', '아이온2'], []);
+  const cats = useMemo(() => ['아이온2'], []);
   const posts = useMemo(() => {
     let list = allPosts.slice();
     if (activeCat) list = list.filter(p => p.category === activeCat);
