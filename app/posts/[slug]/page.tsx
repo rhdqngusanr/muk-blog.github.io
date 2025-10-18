@@ -47,6 +47,7 @@ export default async function PostPage(props: { params: Promise<{ slug: string }
       <main className="container">
         <div className="post-toolbar">
           <Link href="/#posts" className="button">목록으로</Link>
+          <Link href="/posts/classes" className="button">직업 정보 모음으로</Link>
           <Link href="/" className="button">홈으로</Link>
         </div>
         <section className="section">

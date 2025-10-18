@@ -49,7 +49,10 @@ export default async function ClassesPage() {
       <main className="container">
         <section className="section">
           <div className="section-header">
-            <h2>직업 정보 모음 <span className="muted">(AI 자동 정리)</span></h2>
+            <h2>
+              직업 정보 모음
+              <span className="muted" style={{ display: 'block' }}>(AI 자동 정리)</span>
+            </h2>
             <span className="muted">한 줄 리스트 · {rows.length}개</span>
           </div>
           <ul className="class-list">
